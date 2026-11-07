@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactate con Buenos Viajes Traslados para cotizar tu traslado al aeropuerto, eventos, turismo o larga distancia.">
+    <meta name="theme-color" content="#0f4c81">
+    <title>Contacto | Buenos Viajes Traslados</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="stylesheet" href="../../css/Reset/reset.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/Contactos/contactos.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="header">
+        <div class="header-inner">
+            <a class="logo" href="../../index.html" aria-label="Buenos Viajes Traslados - Inicio">
+                <img src="../../images/buenos viajes traslados.jpg" alt="" class="img-logo">
+                <span class="logo-texto">
+                    <strong>Buenos Viajes</strong>
+                    <small>Traslados</small>
+                </span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar" id="menu-principal" aria-label="Navegación principal">
+                <ul class="navbar-item navbar-item-start">
+                    <li><a class="botones" href="../../index.html">Inicio</a></li>
+                    <li><a class="botones" href="../../index.html#servicios">Servicios</a></li>
+                    <li><a class="botones" href="../Noticia/noticia.html">Noticia</a></li>
+                    <li><a class="botones activo" href="./contacto.html" aria-current="page">Contacto</a></li>
+                </ul>
+                <ul class="navbar-item navbar-item-end">
+                    <li data-nav-visitante><a class="botones" href="../Login/login.html">Ingresar</a></li>
+                    <li data-nav-visitante><a class="boton boton-primario" href="../Registrar/signup.html">Registrarse</a></li>
+                    <li data-nav-sesion data-nav-client-only hidden><a class="botones" href="../Clientes/clientes.html">Mi cuenta</a></li>
+                    <li data-nav-sesion data-nav-admin-only hidden><a class="botones" href="../Admin/admin.html">Administración</a></li>
+                    <li data-nav-sesion hidden><span class="usuario" data-nav-usuario></span></li>
+                    <li data-nav-sesion hidden><a class="botones boton-salir" href="../../index.html" data-cerrar-sesion>Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main" id="contenido">
+        <div class="pagina-contacto">
+            <div class="contacto-info">
+                <span class="eyebrow">Contacto</span>
+                <h1>Hablemos de tu próximo traslado</h1>
+                <p>
+                    Contanos qué necesitás y te ayudamos a organizar el viaje: aeropuerto, eventos,
+                    turismo o larga distancia.
+                </p>
+
+                <ul class="contacto-lista">
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                        Cobertura en toda Argentina.
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                        Respuesta en menos de 24 horas.
+                    </li>
+                    <li>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        Atención personalizada en cada consulta.
+                    </li>
+                </ul>
+
+                <p class="contacto-nota">
+                    Para cotizar más rápido, incluí la fecha, el origen, el destino y la cantidad
+                    de pasajeros en tu mensaje.
+                </p>
+            </div>
+
+            <div class="contacto-card">
+                <h2>Enviar consulta</h2>
+                <p>Los campos marcados con * son obligatorios.</p>
+
+                <form class="formulario-contacto" id="formulario-contacto" novalidate>
+                    <div class="campo">
+                        <label for="nombre">Nombre *</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="given-name">
+                        <div id="error-nombre" class="error" aria-live="polite"></div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="apellido">Apellido *</label>
+                        <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" autocomplete="family-name">
+                        <div id="error-apellido" class="error" aria-live="polite"></div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="edad">Edad *</label>
+                        <input type="number" id="edad" name="edad" min="18" max="60" placeholder="Ej. 30">
+                        <div id="error-edad" class="error" aria-live="polite"></div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono (opcional)</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="Ej. 11 5555 5555" autocomplete="tel">
+                    </div>
+
+                    <div class="campo campo-completo">
+                        <label for="mensaje">Mensaje *</label>
+                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Contanos fecha, origen, destino y cantidad de pasajeros."></textarea>
+                        <div id="error-mensaje" class="error" aria-live="polite"></div>
+                    </div>
+
+                    <button type="submit" class="boton boton-primario">Enviar consulta</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-marca">
+                <img src="../../images/buenos viajes traslados.jpg" alt="" class="footer-logo">
+                <div>
+                    <strong>Buenos Viajes Traslados</strong>
+                    <span>Más que un traslado, un buen viaje.</span>
+                </div>
+            </div>
+            <nav class="footer-nav" aria-label="Enlaces del pie de página">
+                <a href="../../index.html#servicios">Servicios</a>
+                <a href="../Noticia/noticia.html">Noticia</a>
+                <a href="./contacto.html">Contacto</a>
+                <a href="../Login/login.html">Acceso administración</a>
+            </nav>
+            <p class="footer-copy">© 2026 Buenos Viajes Traslados. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/Contactos/contacto.js"></script>
+    <script src="../../js/header.js"></script>
+</body>
+</html>

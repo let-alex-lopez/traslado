@@ -1,0 +1,67 @@
+.tabla-contactos {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin: 10px;
+    padding: 10px;
+    background-color: #3498db;
+    border-radius: 20px;
+    color: #fff;
+}
+
+
+
+.tabla-contactos th, .tabla-contactos td {
+    padding: 12px 8px;
+    text-align: left;
+    border-bottom: 1px solid #fff;
+}
+
+.tabla-contactos tr:last-child td {
+    border-bottom: none;
+}
+@media screen and (max-width: 1366px) {
+    .tabla-contactos {
+        font-size: 14px;
+        padding: 6px;
+    }
+    .tabla-contactos tr:last-child td {
+        padding: 8px 4px;
+    }
+
+}
+
+.header .navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex: 4;
+    height: 100px; 
+    background-color: #9bd0e7;
+}
+
+.navbar-item { 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    list-style: none; 
+    width: 100%;
+}
+
+li {
+    flex-direction: row;
+    margin-top: 15px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+li .botones {
+    color: white;
+    display: inline-block;
+    border: thick solid transparent;
+    position: relative;
+    font-size: 1.5em;
+    cursor: pointer;
+    letter-spacing: 0.07em;
+}

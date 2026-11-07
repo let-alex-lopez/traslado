@@ -1,0 +1,264 @@
+CAMBIOS DEL PROYECTO - BUENOS VIAJES TRASLADOS
+Fecha: 3 de noviembre de 2026
+Nota: la carpeta no es un repositorio Git, por lo que este changelog es manual.
+
+===========================================================
+ARCHIVOS NUEVOS (3)
+===========================================================
+
+images/favicon.svg
+  - Nuevo ícono del sitio (monograma "BV" sobre fondo azul).
+
+js/header.js
+  - Lógica compartida del header:
+    * Abre/cierra el menú hamburguesa en móvil.
+    * Actualiza aria-expanded y cierra con Escape, al hacer clic en un
+      enlace o al volver a escritorio.
+    * Agrega sombra al header al hacer scroll.
+    * Borra la sesión (localStorage) en los enlaces "Cerrar sesión".
+
+cambios.txt
+  - Este archivo (antes existía vacío por el intento de `git log`).
+
+===========================================================
+CSS MODIFICADOS (9)
+===========================================================
+
+css/styles.css
+  - Antes: 12 líneas (.container y .footer).
+  - Ahora: sistema de diseño base:
+    * Importación de la fuente Manrope.
+    * Variables de color, radios, sombras, ancho máximo y transiciones.
+    * Reset de box-sizing, tipografía base y body en columna flexible.
+    * Utilidades .sr-only, .skip-link y .eyebrow.
+    * Sistema de botones: .boton, .boton-primario, .boton-secundario,
+      .boton-claro.
+    * Footer completo (.footer-inner, .footer-marca, .footer-nav,
+      .footer-copy) y responsive.
+
+css/header.css
+  - Antes: header flex con logo sobre fondo azul puro, links blancos sobre
+    celeste claro, márgenes globales de <li> y animación de letter-spacing.
+  - Ahora: header sticky con fondo blanco translúcido y sombra al scroll.
+    * Logo de 48px redondeado + nombre de la marca.
+    * Navegación con estado activo, hover legible y botón Registrarse.
+    * Píldora de usuario y enlace de cerrar sesión.
+    * Botón hamburguesa animado y panel desplegable en móvil (<=980px).
+    * Se eliminaron las reglas globales de <li>.
+
+css/main.css
+  - Antes: alturas fijas (88vh, 84.4vh), selectores duplicados y tabla con
+    display:flex.
+  - Ahora: layout general y home:
+    * .main y .main-content sin alturas fijas.
+    * Hero en dos columnas con badge, título, acciones, datos e imagen
+      flotante.
+    * Secciones, encabezados y eyebrow.
+    * Tabla de servicios real (display:table, encabezado azul, filas
+      alternadas y hover).
+    * Tarjetas de beneficios y CTA final.
+    * Estilos de páginas internas (.pagina, .pagina-encabezado).
+    * Tablas de listados (.tabla-scroll, .tabla-lista, .tabla-vacia).
+    * Responsive en 900px y 720px.
+
+css/Noticia/noticia.css
+  - Antes: contenedor de 850px con borde negro de 20px e imagen fija de
+    1000px.
+  - Ahora: estilos de artículo: migas, encabezado, metadatos, figura con
+    caption, cuerpo en tarjeta, entradilla, lista con viñetas, acciones y
+    responsive.
+
+css/Contactos/contactos.css
+  - Antes: formulario dentro de una caja azul, botón de 80px y override
+    del footer.
+  - Ahora: página en dos columnas (información + tarjeta del formulario).
+    * Lista de beneficios del contacto y nota destacada.
+    * Formulario en grid de dos columnas con foco accesible, errores y
+      responsive a una columna.
+
+css/Login/login.css
+  - Antes: body azul plano, tarjeta de 350px y cinco media queries.
+  - Ahora: estilos compartidos de autenticación:
+    * Fondo con gradientes, tarjeta de hasta 440px, marca, títulos.
+    * Inputs con foco, errores, acciones y enlaces.
+    * Responsive para móvil.
+
+css/admin/admin.css
+  - Antes: duplicaba reglas del header, estilos globales de .usuario y
+    .botones, y estilos viejos de la home/tabla.
+  - Ahora: solo estilos del panel:
+    * Grid y tarjetas de acceso rápido, íconos, enlaces y bienvenida.
+    * Se eliminaron las reglas globales que rompían el header nuevo.
+
+css/Registrar/registrar.css
+  - Antes: copia completa de login.css.
+  - Ahora: importa los estilos de login (sin duplicación).
+
+css/Cliente/cliente.css
+  - Antes: copia completa de admin.css.
+  - Ahora: importa los estilos del panel (sin duplicación).
+
+===========================================================
+HTML REESCRITOS (10)
+===========================================================
+
+index.html
+  - Reestructura completa.
+  - Header nuevo con logo, nombre, menú y botones de sesión.
+  - Hero con propuesta de valor, CTAs e imagen.
+  - Tabla de servicios con marcado válido (thead/tbody/tr/th) y contenido
+    real (aeropuerto, eventos, turismo y larga distancia).
+  - Sección "Por qué elegirnos" con tres beneficios.
+  - CTA final y footer nuevo.
+  - Se agregaron meta description, theme-color, favicon, skip link y
+    lang="es".
+  - Se eliminaron etiquetas sueltas, el div sin cerrar, la tabla rota y
+    los textos de relleno.
+
+view/Noticia/noticia.html
+  - Contenido reemplazado: ya no habla de juegos de Epic Games.
+  - Nuevo artículo sobre la ampliación de la flota, con fecha, imagen,
+    lista de mejoras y CTAs.
+  - Header/footer nuevos, migas de navegación y rutas correctas.
+
+view/Contactos/contacto.html
+  - Nuevo layout de contacto en dos columnas.
+  - Formulario con nombre, apellido, edad, teléfono opcional y mensaje.
+  - Errores accesibles (aria-live), placeholders y botón de envío.
+  - Se eliminaron los divs sobrantes y el header viejo.
+
+view/Login/login.html
+  - Nueva tarjeta de login con marca y enlace al inicio.
+  - Labels antes de los inputs e ID de contraseña sin ñ (contrasena).
+  - Se corrigieron rutas ../../Css y ../../Js a minúsculas.
+  - Se cerró el contenedor que quedaba abierto y se puso lang="es".
+
+view/Registrar/signup.html
+  - Misma estética que el login.
+  - IDs sin ñ (contrasena y confirmar-contrasena).
+  - Rutas corregidas, enlace al login y lang="es".
+
+view/Admin/admin.html
+  - Antes: copia de la home con tabla de relleno.
+  - Ahora: panel con bienvenida (id usuario-bienvenida) y tres tarjetas:
+    Contactos, Usuarios y Registros.
+  - Navegación de administración, píldora de usuario (id usuario) y
+    cerrar sesión.
+  - Se corrigió el enlace de salida a ../../index.html.
+
+view/Clientes/clientes.html
+  - Antes: copia de la home con tabla de relleno.
+  - Ahora: área de cliente con bienvenida y tarjetas para reservar,
+    ver servicios y leer novedades.
+  - Navegación de cliente, usuario y cerrar sesión.
+
+view/Contactos/lista-contactos.html
+  - Página de listado nueva y ordenada.
+  - Tabla válida con Nombre, Apellido, Edad, Teléfono y Mensaje.
+  - tbody con id contactos-lista.
+  - Se eliminaron ul/div anidados incorrectos y el CSS de admin.
+  - Cabecera con botón "Nueva consulta" y footer nuevo.
+
+view/Usuarios/lista-usuarios.html
+  - tbody corregido a usuario-lista (antes contactos-lista).
+  - Columnas corregidas: Usuario, Email, Contraseña y Registro.
+  - Se quitó el texto "//error//" y el enlace inválido /index.html.
+  - Navegación de administración y footer nuevo.
+
+view/Login/lista-login.html
+  - tbody corregido a login-lista (antes contactos-lista).
+  - Columnas: Usuario, Contraseña y Último ingreso.
+  - Navegación de administración, botón "Ir al login" y footer nuevo.
+
+===========================================================
+JAVASCRIPT (8 REESCRITOS + 1 NUEVO)
+===========================================================
+
+js/header.js (nuevo)
+  - Ver sección "Archivos nuevos".
+
+js/Contactos/contacto.js
+  - Corregida la fecha: ahora se ejecuta toLocaleDateString().
+  - Eliminado formulario.submit(), que recargaba la página.
+  - Guarda también el teléfono.
+  - Validación de edad numérica y mensajes con acentos correctos.
+  - Limpia los errores al enviar y al reiniciar el formulario.
+  - Archivo reescrito en UTF-8 (antes tenía caracteres corruptos).
+
+js/Contactos/lista-contactos.js
+  - Renderiza las cinco columnas, incluido el teléfono.
+  - Usa textContent (evita inyección de HTML).
+  - Muestra estado vacío y controla que exista el tbody.
+
+js/Login/login.js
+  - Reescrito en UTF-8 y con el ID contrasena.
+  - Compatible con usuarios viejos guardados con la clave "contraseña".
+  - Muestra el error en pantalla en vez de alerts.
+  - Redirecciones corregidas: ../Clientes/clientes.html y
+    ../Admin/admin.html.
+  - Valida campos vacíos.
+
+js/Registrar/registrar.js
+  - Reescrito en UTF-8 y con IDs sin ñ.
+  - Corregido un bug que reiniciaba la variable error en la validación del
+    email.
+  - Verifica usuario y email duplicados.
+  - Guarda la contraseña como contrasena.
+  - Redirección corregida a ../Login/login.html.
+
+js/Login/lista-login.js
+  - Usa el tbody login-lista.
+  - Controla sesión inexistente y muestra estado vacío.
+  - Compatible con la clave vieja "contraseña".
+
+js/Usuario/lista-usuario.js
+  - Usa el tbody usuario-lista.
+  - Renderiza las cuatro columnas nuevas.
+  - Controla lista vacía y usa textContent.
+
+js/Usuario/usuario.js
+  - Maneja el array de sesiones y toma la última.
+  - Si no hay sesión, redirige a ../Login/login.html.
+  - Completa el usuario del header y la bienvenida.
+
+js/Usuario/Admin/admin.js
+  - Maneja el array de sesiones y busca al usuario admin.
+  - Redirección corregida a ../../index.html (antes apuntaba a
+    ../../view/index.html).
+  - Controla que los elementos existan antes de escribir.
+
+===========================================================
+ARCHIVOS SIN CAMBIOS
+===========================================================
+
+css/Reset/reset.css
+images/traffic.jpg
+images/buenos viajes traslados.jpg
+Bucles/ìndex.html
+Bucles/js/blucles.js
+css/Usuarios/usuario.css (vacío)
+
+===========================================================
+ARCHIVOS QUE QUEDARON SIN USAR
+===========================================================
+
+css/Contactos/lista-contactos.css
+css/Login/lista-login.css
+css/Usuarios/lista-usuario.css
+  - Contenían reglas viejas de tablas y del header. Ya no se enlazan desde
+    ninguna página; se pueden borrar.
+
+===========================================================
+PRUEBAS REALIZADAS
+===========================================================
+
+- 41/41 pruebas automatizadas en Chrome headless.
+- Escritorio 1440x900 y móvil 390x844 sin scroll horizontal.
+- Menú móvil: abre, actualiza aria-expanded y cierra con Escape.
+- Formulario de contacto: guarda la consulta y el teléfono, y valida
+  campos vacíos.
+- Registro -> login -> área de cliente funcionando.
+- Login admin -> panel funcionando.
+- Listas de contactos, usuarios y registros renderizando datos y estados
+  vacíos.
+- Sin errores de consola ni excepciones.

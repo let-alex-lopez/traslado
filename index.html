@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buenos Viajes Traslados: traslados seguros y puntuales al aeropuerto, eventos, turismo y larga distancia en toda Argentina.">
+    <meta name="theme-color" content="#0f4c81">
+    <title>Buenos Viajes Traslados | Más que un traslado, un buen viaje</title>
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
+    <link rel="stylesheet" href="./css/Reset/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="header">
+        <div class="header-inner">
+            <a class="logo" href="./index.html" aria-label="Buenos Viajes Traslados - Inicio">
+                <img src="./images/buenos viajes traslados.jpg" alt="" class="img-logo">
+                <span class="logo-texto">
+                    <strong>Buenos Viajes</strong>
+                    <small>Traslados</small>
+                </span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar" id="menu-principal" aria-label="Navegación principal">
+                <ul class="navbar-item navbar-item-start">
+                    <li><a class="botones activo" href="./index.html" aria-current="page">Inicio</a></li>
+                    <li><a class="botones" href="#servicios">Servicios</a></li>
+                    <li><a class="botones" href="./view/Noticia/noticia.html">Noticia</a></li>
+                    <li><a class="botones" href="./view/Contactos/contacto.html">Contacto</a></li>
+                </ul>
+                <ul class="navbar-item navbar-item-end">
+                    <li data-nav-visitante><a class="botones" href="./view/Login/login.html">Ingresar</a></li>
+                    <li data-nav-visitante><a class="boton boton-primario" href="./view/Registrar/signup.html">Registrarse</a></li>
+                    <li data-nav-sesion data-nav-client-only hidden><a class="botones" href="./view/Clientes/clientes.html">Mi cuenta</a></li>
+                    <li data-nav-sesion data-nav-admin-only hidden><a class="botones" href="./view/Admin/admin.html">Administración</a></li>
+                    <li data-nav-sesion hidden><span class="usuario" data-nav-usuario></span></li>
+                    <li data-nav-sesion hidden><a class="botones boton-salir" href="./index.html" data-cerrar-sesion>Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main" id="contenido">
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-contenido">
+                    <span class="badge">Traslados en toda Argentina</span>
+                    <h1>Más que un traslado, <span>un buen viaje</span></h1>
+                    <p class="hero-texto">
+                        Somos especialistas en traslados seguros y responsables. Te llevamos al
+                        aeropuerto, a tu evento o a tu próximo destino con puntualidad, comodidad
+                        y atención personalizada.
+                    </p>
+                    <div class="hero-acciones">
+                        <a class="boton boton-primario" href="./view/Contactos/contacto.html">Reservar un traslado</a>
+                        <a class="boton boton-secundario" href="#servicios">Ver servicios</a>
+                    </div>
+                    <ul class="hero-datos">
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Cobertura nacional
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            Atención personalizada
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                            Puntualidad
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="hero-imagen">
+                    <img src="./images/traffic.jpg" alt="Vehículo de Buenos Viajes Traslados en ruta">
+                    <div class="hero-flotante">
+                        <span class="hero-flotante-icono">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V9a1 1 0 0 1 1-1h9l4 4h3a1 1 0 0 1 1 1v3"/><path d="M3 16h18"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg>
+                        </span>
+                        <div>
+                            <strong>Puerta a puerta</strong>
+                            <span>Sin esperas ni complicaciones</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" id="servicios">
+            <div class="seccion-encabezado">
+                <span class="eyebrow">Nuestros servicios</span>
+                <h2>Un traslado para cada ocasión</h2>
+                <p>Elegí el servicio que necesitás y coordinamos todo: vehículo, horario y recorrido.</p>
+            </div>
+
+            <div class="tabla-wrapper">
+                <table class="tabla-de-contenido">
+                    <caption class="sr-only">Servicios de traslado disponibles</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">Servicio</th>
+                            <th scope="col">Qué incluye</th>
+                            <th scope="col">Ideal para</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Traslado al aeropuerto</th>
+                            <td>Seguimiento de vuelo, recepción y ayuda con el equipaje.</td>
+                            <td>Viajes nacionales e internacionales.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Eventos y empresas</th>
+                            <td>Coordinación de horarios y traslados para grupos.</td>
+                            <td>Congresos, capacitaciones y encuentros deportivos.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Turismo y excursiones</th>
+                            <td>Vehículos cómodos y recorridos a medida.</td>
+                            <td>Vacaciones, tours de compras y paseos.</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Larga distancia</th>
+                            <td>Cobertura nacional con tarifas accesibles.</td>
+                            <td>Viajes entre provincias y traslados de corta, media y larga distancia.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="nota-tabla">Las tarifas se cotizan según el recorrido, la cantidad de pasajeros y el tipo de vehículo.</p>
+        </section>
+
+        <section class="seccion seccion-beneficios">
+            <div class="seccion-encabezado">
+                <span class="eyebrow">Por qué elegirnos</span>
+                <h2>Viajá tranquilo de principio a fin</h2>
+            </div>
+
+            <div class="beneficios-grid">
+                <article class="beneficio">
+                    <span class="beneficio-icono">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+                    </span>
+                    <h3>Seguridad primero</h3>
+                    <p>Conductores responsables y vehículos preparados para que llegues tranquilo a destino.</p>
+                </article>
+
+                <article class="beneficio">
+                    <span class="beneficio-icono">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                    </span>
+                    <h3>Puntualidad</h3>
+                    <p>Coordinamos cada horario con margen para que no tengas que preocuparte por las esperas.</p>
+                </article>
+
+                <article class="beneficio">
+                    <span class="beneficio-icono">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </span>
+                    <h3>Cobertura nacional</h3>
+                    <p>Llegamos a cada rincón del país, con atención personalizada en cada tramo del viaje.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="cta-final">
+            <div class="cta-final-inner">
+                <div>
+                    <h2>¿Listo para tu próximo viaje?</h2>
+                    <p>Contanos a dónde vas y armamos el traslado que necesitás.</p>
+                </div>
+                <a class="boton boton-claro" href="./view/Contactos/contacto.html">Contactanos</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-marca">
+                <img src="./images/buenos viajes traslados.jpg" alt="" class="footer-logo">
+                <div>
+                    <strong>Buenos Viajes Traslados</strong>
+                    <span>Más que un traslado, un buen viaje.</span>
+                </div>
+            </div>
+            <nav class="footer-nav" aria-label="Enlaces del pie de página">
+                <a href="#servicios">Servicios</a>
+                <a href="./view/Noticia/noticia.html">Noticia</a>
+                <a href="./view/Contactos/contacto.html">Contacto</a>
+                <a href="./view/Login/login.html">Acceso administración</a>
+            </nav>
+            <p class="footer-copy">© 2026 Buenos Viajes Traslados. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="./js/header.js"></script>
+</body>
+</html>

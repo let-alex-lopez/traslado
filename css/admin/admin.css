@@ -1,0 +1,64 @@
+/* ============================================================
+   Panel de administración y área de cliente
+   ============================================================ */
+
+.panel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.panel-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 26px;
+    border: 1px solid var(--gris-200);
+    border-radius: var(--radio);
+    background-color: var(--blanco);
+    box-shadow: var(--sombra-sm);
+    transition: transform var(--transicion), box-shadow var(--transicion),
+        border-color var(--transicion);
+}
+
+.panel-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--celeste-200);
+    box-shadow: var(--sombra);
+}
+
+.panel-icono {
+    display: grid;
+    place-items: center;
+    width: 46px;
+    height: 46px;
+    margin-bottom: 4px;
+    border-radius: 13px;
+    background-color: var(--celeste-100);
+    color: var(--azul-600);
+}
+
+.panel-card h2 {
+    font-size: 1.1rem;
+    color: var(--azul-900);
+}
+
+.panel-card p {
+    flex: 1;
+    font-size: 0.92rem;
+    color: var(--gris-500);
+}
+
+.panel-link {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--azul-600);
+}
+
+.panel-card:hover .panel-link {
+    color: var(--azul-700);
+}
+
+#usuario-bienvenida {
+    color: var(--azul-600);
+}

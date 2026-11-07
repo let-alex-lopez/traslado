@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Creá tu cuenta en Buenos Viajes Traslados.">
+    <meta name="theme-color" content="#0f4c81">
+    <title>Registrarse | Buenos Viajes Traslados</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="stylesheet" href="../../css/Reset/reset.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/Registrar/registrar.css">
+</head>
+<body class="auth">
+    <main class="auth-wrap">
+        <div class="container auth-card">
+            <a class="auth-marca" href="../../index.html" aria-label="Volver al inicio">
+                <img src="../../images/buenos viajes traslados.jpg" alt="">
+                <span>
+                    <strong>Buenos Viajes</strong>
+                    <small>Traslados</small>
+                </span>
+            </a>
+
+            <h1>Crear cuenta</h1>
+            <p class="auth-sub">Completá tus datos para registrarte.</p>
+
+            <form class="registrar-form" id="registrar-form" novalidate>
+                <div class="form-inputs">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" name="usuario" id="usuario" autocomplete="username" placeholder="Elegí un usuario">
+                    <div class="input-error" id="error-usuario" aria-live="polite"></div>
+                </div>
+
+                <div class="form-inputs">
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" autocomplete="email" placeholder="tu@email.com">
+                    <div class="input-error" id="error-email" aria-live="polite"></div>
+                </div>
+
+                <div class="form-inputs">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" name="contrasena" id="contrasena" autocomplete="new-password" placeholder="Entre 5 y 12 caracteres">
+                    <div class="input-error" id="error-contrasena" aria-live="polite"></div>
+                </div>
+
+                <div class="form-inputs">
+                    <label for="confirmar-contrasena">Confirmar contraseña</label>
+                    <input type="password" name="confirmar-contrasena" id="confirmar-contrasena" autocomplete="new-password" placeholder="Repetí tu contraseña">
+                    <div class="input-error" id="error-confirmar-contrasena" aria-live="polite"></div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="boton boton-primario">Registrarme</button>
+                    <a class="boton boton-secundario" href="../../index.html">Cancelar</a>
+                </div>
+            </form>
+
+            <p class="registrar-link">
+                ¿Ya tenés cuenta? <a href="../Login/login.html">Iniciá sesión</a>
+            </p>
+        </div>
+    </main>
+
+    <script src="../../js/Registrar/registrar.js"></script>
+</body>
+</html>

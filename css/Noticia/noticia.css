@@ -1,0 +1,129 @@
+/* ============================================================
+   Página de noticia / artículo
+   ============================================================ */
+
+.articulo {
+    width: 100%;
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 48px 24px 80px;
+}
+
+.migas {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 18px;
+    font-size: 0.85rem;
+    color: var(--gris-500);
+}
+
+.migas a {
+    color: var(--azul-600);
+    font-weight: 600;
+}
+
+.migas a:hover {
+    text-decoration: underline;
+}
+
+.articulo-header h1 {
+    margin: 6px 0 14px;
+    font-size: clamp(2rem, 4vw, 2.9rem);
+    color: var(--azul-900);
+}
+
+.articulo-meta {
+    font-size: 0.88rem;
+    color: var(--gris-500);
+}
+
+.articulo-figura {
+    margin: 28px 0;
+}
+
+.articulo-figura img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: var(--radio-lg);
+    box-shadow: var(--sombra-sm);
+}
+
+.articulo-figura figcaption {
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: var(--gris-500);
+}
+
+.articulo-cuerpo {
+    padding: 38px;
+    border: 1px solid var(--gris-200);
+    border-radius: var(--radio-lg);
+    background-color: var(--blanco);
+    box-shadow: var(--sombra-sm);
+}
+
+.articulo-cuerpo p {
+    margin-bottom: 16px;
+    color: var(--gris-700);
+}
+
+.articulo-cuerpo p:last-child {
+    margin-bottom: 0;
+}
+
+.entradilla {
+    font-size: 1.12rem;
+    font-weight: 500;
+    color: var(--gris-900) !important;
+}
+
+.articulo-cuerpo h2 {
+    margin: 30px 0 14px;
+    font-size: 1.4rem;
+    color: var(--azul-900);
+}
+
+.articulo-lista {
+    margin: 0 0 18px;
+    padding: 0;
+    list-style: none;
+}
+
+.articulo-lista li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 26px;
+    color: var(--gris-700);
+}
+
+.articulo-lista li::before {
+    content: "";
+    position: absolute;
+    top: 0.62em;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--azul-500);
+}
+
+.articulo-acciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 24px;
+    border-top: 1px solid var(--gris-200);
+}
+
+@media (max-width: 720px) {
+    .articulo {
+        padding: 36px 18px 64px;
+    }
+
+    .articulo-cuerpo {
+        padding: 24px 20px;
+    }
+}

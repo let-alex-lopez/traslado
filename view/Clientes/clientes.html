@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0f4c81">
+    <title>Mi cuenta | Buenos Viajes Traslados</title>
+    <link rel="icon" type="image/svg+xml" href="../../images/favicon.svg">
+    <link rel="stylesheet" href="../../css/Reset/reset.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/Cliente/cliente.css">
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="header">
+        <div class="header-inner">
+            <a class="logo" href="./clientes.html" aria-label="Mi cuenta">
+                <img src="../../images/buenos viajes traslados.jpg" alt="" class="img-logo">
+                <span class="logo-texto">
+                    <strong>Buenos Viajes</strong>
+                    <small>Traslados</small>
+                </span>
+            </a>
+
+            <button class="nav-toggle" type="button" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar" id="menu-principal" aria-label="Navegación principal">
+                <ul class="navbar-item navbar-item-start">
+                    <li><a class="botones activo" href="./clientes.html" aria-current="page">Mi cuenta</a></li>
+                    <li><a class="botones" href="../../index.html#servicios">Servicios</a></li>
+                    <li><a class="botones" href="../Noticia/noticia.html">Noticia</a></li>
+                    <li><a class="botones" href="../Contactos/contacto.html">Contacto</a></li>
+                </ul>
+                <ul class="navbar-item navbar-item-end">
+                    <li><span class="usuario" id="usuario"></span></li>
+                    <li><a class="botones boton-salir" href="../../index.html" data-cerrar-sesion>Cerrar sesión</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main" id="contenido">
+        <section class="pagina">
+            <header class="pagina-encabezado">
+                <div>
+                    <span class="eyebrow">Mi cuenta</span>
+                    <h1>Hola, <span id="usuario-bienvenida">viajero</span></h1>
+                    <p>Desde acá podés reservar tu próximo traslado y consultar las novedades.</p>
+                </div>
+                <a class="boton boton-secundario" href="../../index.html">Ir al sitio</a>
+            </header>
+
+            <div class="panel-grid">
+                <a class="panel-card" href="../Contactos/contacto.html">
+                    <span class="panel-icono">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16V9a1 1 0 0 1 1-1h9l4 4h3a1 1 0 0 1 1 1v3"/><path d="M3 16h18"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/></svg>
+                    </span>
+                    <h2>Reservar un traslado</h2>
+                    <p>Contanos fecha, origen y destino para cotizar tu viaje.</p>
+                    <span class="panel-link">Ir al formulario →</span>
+                </a>
+
+                <a class="panel-card" href="../../index.html#servicios">
+                    <span class="panel-icono">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </span>
+                    <h2>Nuestros servicios</h2>
+                    <p>Aeropuerto, eventos, turismo y larga distancia.</p>
+                    <span class="panel-link">Ver servicios →</span>
+                </a>
+
+                <a class="panel-card" href="../Noticia/noticia.html">
+                    <span class="panel-icono">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9h4"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+                    </span>
+                    <h2>Novedades</h2>
+                    <p>Enterate de las mejoras y novedades de la empresa.</p>
+                    <span class="panel-link">Leer noticia →</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-marca">
+                <img src="../../images/buenos viajes traslados.jpg" alt="" class="footer-logo">
+                <div>
+                    <strong>Buenos Viajes Traslados</strong>
+                    <span>Más que un traslado, un buen viaje.</span>
+                </div>
+            </div>
+            <nav class="footer-nav" aria-label="Enlaces del pie de página">
+                <a href="../../index.html">Inicio</a>
+                <a href="../Noticia/noticia.html">Noticia</a>
+                <a href="../Contactos/contacto.html">Contacto</a>
+            </nav>
+            <p class="footer-copy">© 2026 Buenos Viajes Traslados. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../../js/Usuario/usuario.js"></script>
+    <script src="../../js/header.js"></script>
+</body>
+</html>
